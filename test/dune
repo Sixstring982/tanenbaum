@@ -1,0 +1,3 @@
+(test
+ (name example_test)
+ (modules example_test))

@@ -1,0 +1,4 @@
+(executable
+ (name gen)
+ (modules gen)
+ (libraries fmt))

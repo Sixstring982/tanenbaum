@@ -1,0 +1,14 @@
+(library
+ (name aoc)
+ (modules drivers problem_runner)
+ (libraries cmdliner piaf problems import))
+
+(library
+ (name import)
+ (wrapped false)
+ (modules import let fn)
+ (libraries fmt lwt))
+
+(library
+ (name problem)
+ (modules problem))
