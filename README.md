@@ -22,14 +22,23 @@ First, clone or fork this repo.
 ### Create your opam switch
 
 ```bash
-> opam switch create . --deps-only --y
+$ opam switch create . --deps-only --y
 ```
 
 ### Install developer tool dependencies
 
 ```bash
-> opam install ocaml-lsp-server ocamlformat utop
+$ opam install ocaml-lsp-server ocamlformat utop
 ```
+
+### Validate you can build with dune
+
+```bash
+$ dune build
+```
+
+> [!WARNING]
+> If any of these steps fail or cause an error please open an issue
 
 ## Configure authentication
 
@@ -155,10 +164,6 @@ dune exec bin/main.exe -- \
   --part=1 \
   --submit
 ```
-
-> [!WARNING]
-> Be careful about sharing your answers if you choose to fork this repo on
-> GitHub!
 
 # Tips and tricks
 
