@@ -11,6 +11,7 @@ doc: "https://sixstring982.github.io/tanenbaum"
 bug-reports: "https://github.com/sixstring982/tanenbaum/issues"
 depends: [
   "ocaml"
+  "reason"
   "dune" {>= "3.7"}
   "cmdliner" {>= "1.2.0"}
   "piaf" {>= "0.1.0"}
