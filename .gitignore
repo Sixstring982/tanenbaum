@@ -1,12 +1,8 @@
 _build/
 _opam/
-dist/
-build/
+inputs/
 .sl/
 .git/
-node_modules/
 .DS_Store
-**/dist
-**/build
 .envrc
 
