@@ -37,7 +37,7 @@ $ opam install ocaml-lsp-server ocamlformat utop
 $ dune build
 ```
 
-> [!WARNING]
+> [!INFO]
 > If any of these steps fail or cause an error please open an issue
 
 ## Configure authentication
