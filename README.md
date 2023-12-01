@@ -17,7 +17,11 @@ _Tanenbaum_ is an OCaml starter project for Advent of Code.
 
 ## Project setup
 
-First, clone or fork this repo.
+First, clone or fork this repo and change directories into the repo.
+
+> [!NOTE]  
+> If you're a nix user you can skip the following steps and instead run:
+> `$ nix develop`
 
 ### Create your opam switch
 
@@ -124,7 +128,7 @@ module Part_2 = {
 
 `lib/problems/problem_2022_01.mli`:
 
-```ocaml_interface
+```ocaml
 include Problem.T
 ```
 
@@ -132,7 +136,7 @@ include Problem.T
 
 `lib/problems/problem_2022_01.rei`:
 
-```reason_interface
+```reason
 include Problem.T;
 ```
 
