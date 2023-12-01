@@ -154,7 +154,7 @@ include Problem.T;
 
 ### Running problems
 
-Once you've added your problem, you can test your solution by runnint it with `dune` (optionally providing
+Once you've added your problem, you can test your solution by running it with `dune` (optionally providing
 the `--watch` flag will re-run your problem when you change your code). This will output your answer to the terminal:
 
 ```shell
