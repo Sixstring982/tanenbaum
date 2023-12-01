@@ -1,8 +1,6 @@
 _build/
 _opam/
-inputs/
 .sl/
 .git/
 .DS_Store
 .envrc
-
