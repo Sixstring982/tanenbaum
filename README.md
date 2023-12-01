@@ -93,7 +93,7 @@ end
 
 `lib/problems/problem_2022_01.re`;
 
-```reasonml
+```reason
 let year = 2022;
 let day = 1;
 
