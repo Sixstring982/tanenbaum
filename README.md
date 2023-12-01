@@ -142,20 +142,24 @@ include Problem.T;
 
 ### Running problems
 
-Once you've added your problem, you can run it with `dune` (optionally providing
-the `--watch` flag will re-run your problem when you change your code):
+Once you've added your problem, you can test your solution by runnint it with `dune` (optionally providing
+the `--watch` flag will re-run your problem when you change your code). This will output your answer to the terminal:
 
 ```shell
-dune exec --watch bin/main.exe -- \
+$ dune exec --watch bin/main.exe -- \
   --year=2022 \
   --day=1 \
   --part=1
+
+  # output 
+  your_answer
 ```
 
 ### Submitting answers
 
 Once you're convinced that your problem produces the correct output, you can
-also submit your answer using the CLI via the `--submit` flag.
+either copy and paste your solution into the answer form on `adventofcode.com`, 
+or you can also submit your answer using the CLI via the `--submit` flag.
 
 > [!WARNING]
 > You'll want to disable the `--watch` flag if you have it enabled -- otherwise
