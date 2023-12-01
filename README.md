@@ -70,27 +70,39 @@ like [direnv](https://direnv.net/), e.g.:
 export AUTH_TOKEN="5xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5"
 ```
 
+> [!TIP]
+> If you don't want to configure authentication, you will manually need to create your input directories and files.
+> This can be done my creating the following directory structure from the project root:
+> ```shell 
+> $ mkdir inputs/{year}/{day}.txt
+> ```
+> where Day 01 of 2023 would look like:
+> ```shell 
+> $ mkdir inputs/2023/01.txt
+> ```
+
+
 ## Working on problems
 
-Each problem needs to conform to the `Problem.T` interface, which provides basic
+Each problem needs to conform to the `Problem.T` [interface](https://github.com/Sixstring982/tanenbaum/blob/main/lib/problem.ml), which provides basic
 information about which year/day the problem is for, and functions to call which
 compute the puzzle output from puzzle input.
 
 ### Adding problem files
 
 _Tanenbaum_ will automatically register `.ml` or `.re` files in `lib/problems` which start
-with `problem` -- e.g. `lib/problems/problem_2022_01.ml` or `lib/problems/problem_2022_01.re.
+with `problem` -- e.g. `lib/problems/problem_2023_01.ml` or `lib/problems/problem_2023_01.re`.
 Once you've added a file of this form, you can run it from the CLI.
 
-For example, if we'd like to start working on day 1 of year 2022, _Tanenbaum_
+For example, if we'd like to start working on day 1 of year 2023, _Tanenbaum_
 will automatically we can add this file:
 
 #### OCaml
 
-`lib/problems/problem_2022_01.ml`;
+`lib/problems/problem_2023_01.ml`;
 
 ```ocaml
-let year = 2022
+let year = 2023
 let day = 1
 
 module Part_1 = struct
@@ -104,10 +116,10 @@ end
 
 #### ReasonML
 
-`lib/problems/problem_2022_01.re`;
+`lib/problems/problem_2023_01.re`;
 
 ```reason
-let year = 2022;
+let year = 2023;
 let day = 1;
 
 module Part_1 = {
@@ -126,7 +138,7 @@ module Part_2 = {
 
 ### OCaml
 
-`lib/problems/problem_2022_01.mli`:
+`lib/problems/problem_2023_01.mli`:
 
 ```ocaml
 include Problem.T
@@ -134,7 +146,7 @@ include Problem.T
 
 ### ReasonML
 
-`lib/problems/problem_2022_01.rei`:
+`lib/problems/problem_2023_01.rei`:
 
 ```reason
 include Problem.T;
@@ -147,7 +159,7 @@ the `--watch` flag will re-run your problem when you change your code). This wil
 
 ```shell
 $ dune exec --watch bin/main.exe -- \
-  --year=2022 \
+  --year=2023 \
   --day=1 \
   --part=1
 
@@ -167,7 +179,7 @@ or you can also submit your answer using the CLI via the `--submit` flag.
 
 ```shell
 dune exec bin/main.exe -- \
-  --year=2022 \
+  --year=2023 \
   --day=1 \
   --part=1 \
   --submit
