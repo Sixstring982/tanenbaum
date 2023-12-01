@@ -72,7 +72,7 @@ export AUTH_TOKEN="5xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 > [!TIP]
 > If you don't want to configure authentication, you will manually need to create your input directories and files.
-> This can be done my creating the following directory structure from the project root:
+> This can be done by creating the following directory structure from the project root:
 > ```shell 
 > $ mkdir inputs/{year}/{day}.txt
 > ```
