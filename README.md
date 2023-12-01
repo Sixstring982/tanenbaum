@@ -31,10 +31,6 @@ First, clone or fork this repo.
 > opam install ocaml-lsp-server ocamlformat utop
 ```
 
-> [!WARNING]
-> Be careful about sharing your answers if you choose to fork this repo on
-> GitHub!
-
 ## Configure authentication
 
 _Tanenbaum_ needs a session token from `adventofcode.com` in order to download
@@ -69,12 +65,14 @@ compute the puzzle output from puzzle input.
 
 ### Adding problem files
 
-_Tanenbaum_ will automatically register `.ml` files in `lib/problems` which start
-with `problem` -- e.g. `lib/problems/problem_2022_01.ml`. Once you've added a
-file of this form, you can run it from the CLI.
+_Tanenbaum_ will automatically register `.ml` or `.re` files in `lib/problems` which start
+with `problem` -- e.g. `lib/problems/problem_2022_01.ml` or `lib/problems/problem_2022_01.re.
+Once you've added a file of this form, you can run it from the CLI.
 
 For example, if we'd like to start working on day 1 of year 2022, _Tanenbaum_
 will automatically we can add this file:
+
+#### OCaml
 
 `lib/problems/problem_2022_01.ml`;
 
@@ -91,15 +89,42 @@ module Part_2 = struct
 end
 ```
 
+#### ReasonML
+
+`lib/problems/problem_2022_01.re`;
+
+```reasonml
+let year = 2022;
+let day = 1;
+
+module Part_1 = {
+  let run = (input: string): result(string, string) => Ok(input);
+};
+
+module Part_2 = {
+  let run = (input: string): result(string, string) => Ok(input);
+};
+```
+
 > [!TIP]
-> It's also helpful to add a `.mli` file, which gives the compiler more
+> It's also helpful to add a `.mli` or `.rei` file, which gives the compiler more
 > information about which parts of your code are unused and can therefore be
 > cleaned up:
+
+### OCaml
 
 `lib/problems/problem_2022_01.mli`:
 
 ```ocaml_interface
 include Problem.T
+```
+
+### ReasonML
+
+`lib/problems/problem_2022_01.rei`:
+
+```reason_interface
+include Problem.T;
 ```
 
 ### Running problems
@@ -130,6 +155,10 @@ dune exec bin/main.exe -- \
   --part=1 \
   --submit
 ```
+
+> [!WARNING]
+> Be careful about sharing your answers if you choose to fork this repo on
+> GitHub!
 
 # Tips and tricks
 
